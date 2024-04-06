@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<style>
+
+    body {
+
+      background-image: url('Fundos/Fundo4.png');
+      background-size: cover; 
+      background-repeat: no-repeat;
+
+    }
+
+</style>
+
+<script>
+
+    function sorteia(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+    var numero_pensado = sorteia(0, 10);
+    var chances = 1;
+    
+    while (chances <= 3) {
+        var numero_chutado = parseInt(prompt('Já pensei em um número, digite seu chute:'));
+        if (numero_chutado == numero_pensado) {
+            alert('Parabéns você acertou!');
+            break
+        }else {
+            alert('Que pena, você errou, tente novamente!');
+        }
+        if (chances == 3) {
+        alert('O número era ' + numero_pensado);
+        }
+        chances++;
+    }
+
+</script>

@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<style>
+
+    body {
+        
+      background-image: url('Fundos/Fundo2.png');
+      background-size: cover; 
+      background-repeat: no-repeat;
+
+      font-family: Arial, sans-serif;
+      font-size: 25px; 
+      color: #ffff;
+    }
+
+</style>
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var nome = prompt("Qual é o seu nome?");
+    var idade = parseInt(prompt("Quantos anos você tem?"));
+    var linguagem = prompt("Qual linguagem de programação você está estudando?");
+
+    mostra('Olá ' + nome + ', você tem ' + idade + ' anos e está aprendendo ' + linguagem + '!');
+
+    var pergunta = parseInt(prompt('Você gosta de estudar ' + linguagem + '? Responda com o número 1 para SIM ou 2 para NÃO.'));
+
+    if (pergunta == 1) {
+        mostra('Muito bom! Continue estudando e você terá muito sucesso.');
+    } else {
+        mostra('Ah, que pena... Já tentou aprender outras linguagens?');
+    }
+
+</script>
